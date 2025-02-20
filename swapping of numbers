@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Input two numbers
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    // Swap the numbers
+    a = a + b;  // Step 1: a now becomes sum of a and b
+    b = a - b;  // Step 2: b becomes original a
+    a = a - b;  // Step 3: a becomes original b
+
+    // Output the swapped numbers
+    printf("After swapping:\n");
+    printf("First number: %d\n", a);
+    printf("Second number: %d\n", b);
+
+    return 0;
+}
