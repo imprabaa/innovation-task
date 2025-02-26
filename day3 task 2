@@ -1,0 +1,27 @@
+class Book 
+{
+    String title;
+    String author;
+    
+    public Book() {
+        this.title= "c++ programming";
+        this.author= "Bala guru swamy";
+    }
+    public Book(String title,String author)
+    {
+        this.title = title;
+        this.author = author;
+    }
+    public void display()
+    {
+        System.out.println("title:"+title);
+        System.out.println("author:"+author);
+    }
+    public static void main(String[] args) {
+        Book b1=new Book();
+        b1.display();
+        Book b2=new Book("Harry potter","skibidiii");
+        b2.display();
+    }
+    
+}
