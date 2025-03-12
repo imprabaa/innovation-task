@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class PrimeNumberCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input the number
+        System.out.print("Enter a number: ");
+        int num = scanner.nextInt();
+
+        // Check if the number is prime
+        boolean isPrime = true;
+
+        // A prime number is greater than 1 and divisible only by 1 and itself
+        if (num <= 1) {
+            isPrime = false;  // Numbers less than or equal to 1 are not prime
+        } else {
+            // Check for factors from 2 to the square root of the number
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;  // No need to check further if a factor is found
+                }
+            }
+        }
+
+        // Output the result
+        if (isPrime) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+
+        // Close the scanner object
+        scanner.close();
+    }
+}
