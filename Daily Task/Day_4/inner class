@@ -1,0 +1,35 @@
+interface Runnable {
+    void run();
+}
+public class Computer {
+    class Processor {
+        void process() {
+            System.out.println("Processing ");
+        }
+    }
+    public void start() {
+        class Screen {
+            void display() {
+                System.out.println("Displaying on screen");
+            }
+        }
+        Screen s = new Screen();
+        s.display();
+    }
+    public void runProgram() {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("Running the program");
+            }
+        };
+        runnable.run();
+    }
+    public static void main(String[] args) {
+        Computer computer = new Computer();
+        Computer.Processor processor = computer.new Processor();
+        processor.process();
+        computer.start();
+        computer.runProgram();
+    }
+}
